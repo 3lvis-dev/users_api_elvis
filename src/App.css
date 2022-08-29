@@ -1,0 +1,210 @@
+.App {
+  background-color: #d400d4;
+  height: 100vh;
+  position: relative;
+}
+
+/* < ==================== Form ==================== > */
+.form__container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+}
+
+@media (min-width: 500px) {
+  .form_container {
+    width: 40%;
+  }
+}
+
+.form__title {
+  margin-left: 5rem;
+  font-size: 2rem;
+  color: black;
+}
+
+form {
+  background: #fff;
+  padding: 2rem 0;
+  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0,8);
+  border-radius: 1rem;
+}
+
+.form {
+  width: 100%;
+  margin: auto;
+}
+
+form .form__grupo {
+  position: relative;
+  margin: 4.5rem;
+}
+
+form .form__grupo i{
+  color: #d400d4;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  left: -3rem;
+}
+
+input {
+  background: none;
+  display: block;
+  padding: 10px 10px 10px 5px;
+  border: none;
+  border-bottom: 0.1rem solid #5e5d5d;
+  font-size: 1.2rem;
+  color: #c6c6c6;
+  width: 100%;
+}
+
+input:focus{
+  outline: none;
+  color: #5e5d5d;
+}
+
+label{
+  font-size: 1.6rem;
+  color: #5e5d5d;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  transition: 0.5s ease-in-out all;
+  pointer-events: none;
+}
+
+input:focus~label, 
+input:valid~label{
+  top: -1rem; 
+  font-size: 1.2rem;
+  color: #27b874;
+}
+
+.barra {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.barra::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  background: #d400d4;
+  transition: 0.3s ease;
+  left: 0;
+}
+
+input:focus~.barra::before{
+  width: 100%;
+}
+
+button {
+  background: #27b874;
+  display: block;
+  margin: 10px auto;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 80%;
+  height: 40px;
+  font-family: 'roboto';
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+@media (min-width: 500px) {
+  form {
+    width: 80%;
+  }
+}
+/* < ==================== Form END ==================== > */
+
+/* < ==================== CONTAINER CARD ==================== > */
+.container {
+  background-color: #d400d4;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  width: 70%;
+  position: absolute;
+  left: 0;
+  gap: 2rem;
+}
+
+/* < ==================== CARD ==================== > */
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  border-radius: 1rem;
+  width: 50%;
+  height: 150px;
+  font-size: var(--font-size);
+  line-height: 3rem;
+  color: var(--font-letter-color);
+  transition: transform 200ms ease;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 200ms ease;
+}
+
+.card__container {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  width: 70%;
+}
+
+.card__container h2 {
+  color: var(--font-h-color);
+}
+
+.card__list {
+  font-weight: 600;
+}
+
+.card__item:nth-child(2) {
+  color: var(--font-h-color);
+}
+
+.bx-gift {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.card__btn {
+  background-color: white; 
+  display: flex;
+  align-items: center;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  font-size: 2.2rem;
+  width: 20%;
+  height: 20px;
+}
+
+.card__btn:nth-child(1) {
+  color: #D93F3F;
+}
+
+.card__btn:nth-child(2) {
+  color: #242424;
+}
